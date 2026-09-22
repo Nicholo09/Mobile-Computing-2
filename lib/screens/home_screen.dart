@@ -86,11 +86,13 @@ class HomeScreen extends StatelessWidget {
               onTap: () => Navigator.pushNamed(context, '/activity2'),
             ),
 
-            // Activity 3 — locked
-            const ActivityCard(
-              icon: Icons.hourglass_empty,
+            // Activity 3 — available
+            ActivityCard(
+              icon: Icons.network_check,
               title: 'Activity 3',
-              subtitle: 'Not Available Yet',
+              subtitle: 'Dynamic Performance Throttle App',
+              isAvailable: true,
+              onTap: () => Navigator.pushNamed(context, '/activity3'),
             ),
 
             // Activity 4 — locked

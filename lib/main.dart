@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'providers/network_health_provider.dart';
 import 'providers/theme_provider.dart';
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/activity2_screen.dart';
+import 'screens/activity3_screen.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => ThemeProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => NetworkHealthProvider()),
+      ],
       child: const MyApp(),
     ),
   );
@@ -118,6 +123,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomeScreen(),
         '/settings': (context) => const SettingsScreen(),
         '/activity2': (context) => const Activity2Screen(),
+        '/activity3': (context) => const Activity3Screen(),
       },
     );
   }
