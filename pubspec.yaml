@@ -9,21 +9,16 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  connectivity_plus: ^7.3.1
   flutter:
     sdk: flutter
   provider: ^6.1.2
+  connectivity_plus: ^6.0.3
+  http: ^1.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  flutter_launcher_icons: ^0.14.3
 
 flutter:
   uses-material-design: true
-
-flutter_launcher_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon/app_icon.png"
